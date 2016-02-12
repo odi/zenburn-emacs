@@ -236,11 +236,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(popup-isearch-match ((t (:background ,zenburn-bg :foreground ,zenburn-fg))))
 ;;;;; avy
    `(avy-background-face
-     ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg :inverse-video nil))))
+     ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg :inverse-video t))))
    `(avy-lead-face-0
-     ((t (:foreground ,zenburn-green+3 :background ,zenburn-bg :inverse-video nil))))
+     ((t (:foreground ,zenburn-green+3 :background ,zenburn-bg :inverse-video t))))
    `(avy-lead-face
-     ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg :inverse-video nil))))
+     ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg :inverse-video t))))
 ;;;;; company-mode
    `(company-tooltip ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
    `(company-tooltip-annotation ((t (:foreground ,zenburn-orange :background ,zenburn-bg+1))))
