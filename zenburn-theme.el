@@ -103,7 +103,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(fringe ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
    `(header-line ((t (:foreground ,zenburn-yellow
                                   :background ,zenburn-bg-1
-                                  :box (:line-width -1 :style released-button)))))
+                                  :box (:line-width -1 :style nil)))))
    `(highlight ((t (:background ,zenburn-bg-05))))
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
