@@ -836,7 +836,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(mu4e-cited-5-face ((t (:foreground ,zenburn-blue-4  :slant italic))))
    `(mu4e-cited-6-face ((t (:foreground ,zenburn-green-1 :slant italic))))
    `(mu4e-cited-7-face ((t (:foreground ,zenburn-blue    :slant italic))))
-   `(mu4e-replied-face ((t (:foreground ,zenburn-bg+3))))
+   `(mu4e-replied-face ((t (:foreground ,zenburn-blue-2))))
+   `(mu4e-flagged-face ((t (:foreground ,zenburn-orange :weight bold))))
+   `(mu4e-forwared-face ((t (:foreground ,zenburn-red-3))))
+   `(mu4e-modeline-face ((t (:foreground ,zenburn-orange :weight bold))))
    `(mu4e-trashed-face ((t (:foreground ,zenburn-bg+3 :strike-through t))))
 ;;;;; mumamo
    `(mumamo-background-chunk-major ((t (:background nil))))
