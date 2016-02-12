@@ -103,7 +103,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(fringe ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
    `(header-line ((t (:foreground ,zenburn-yellow
                                   :background ,zenburn-bg-1
-                                  :box (:line-width -1 :style nil)))))
+                                  :box (:line-width -1 :color ,zenburn-bg :style nil)))))
    `(highlight ((t (:background ,zenburn-bg-05))))
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
@@ -141,13 +141,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(mode-line
      ((,class (:foreground ,zenburn-green+1
                            :background ,zenburn-bg-1
-                           :box (:line-width 1 :style nil)))
+                           :box (:line-width 1 :color ,zenburg-bg :style nil)))
       (t :inverse-video t)))
    `(mode-line-buffer-id ((t (:foreground ,zenburn-yellow :weight bold))))
    `(mode-line-inactive
      ((t (:foreground ,zenburn-green-1
                       :background ,zenburn-bg-05
-                      :box (:line-width 1 :style nil)))))
+                      :box (:line-width 1 :color ,zenburg-bg :style nil)))))
    `(region ((,class (:background ,zenburn-bg-1))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,zenburn-bg+2))))
