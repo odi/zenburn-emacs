@@ -55,6 +55,7 @@ defining them in this alist."
 (defvar zenburn-default-colors-alist
   '(("zenburn-fg+1"     . "#FFFFEF")
     ("zenburn-fg"       . "#DCDCCC")
+    ("zenburn-fg-05"    . "#babaad")
     ("zenburn-fg-1"     . "#656555")
     ("zenburn-bg-2"     . "#000000")
     ("zenburn-bg-1"     . "#2B2B2B")
@@ -135,6 +136,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
    `(tooltip ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
+   `(variable-pitch ((t (:font "Source Code Pro"))))
 ;;;;; compilation
    `(compilation-column-face ((t (:foreground ,zenburn-yellow))))
    `(compilation-enter-directory-face ((t (:foreground ,zenburn-green))))
@@ -172,22 +174,22 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; info
    `(Info-quoted ((t (:inherit font-lock-constant-face))))
 ;;;;; isearch
-   `(isearch ((t (:foreground ,zenburn-yellow-2 :weight bold :background ,zenburn-bg+2))))
+   `(isearch ((t (:foreground ,zenburn-bg :weight bold :background ,zenburn-yellow))))
    `(isearch-fail ((t (:foreground ,zenburn-fg :background ,zenburn-red-4))))
-   `(lazy-highlight ((t (:foreground ,zenburn-yellow-2 :weight bold :background ,zenburn-bg-05))))
+   `(lazy-highlight ((t (:foreground ,zenburn-yellow-1 :weight bold :background ,zenburn-blue-3))))
 
    `(menu ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(minibuffer-prompt ((t (:foreground ,zenburn-yellow))))
    `(mode-line
      ((,class (:foreground ,zenburn-green+1
                            :background ,zenburn-bg-1
-                           :box (:line-width 1 :color ,zenburn-bg :style nil)))
+                           :box (:line-width -1 :color ,zenburn-bg :style released-button)))
       (t :inverse-video t)))
    `(mode-line-buffer-id ((t (:foreground ,zenburn-yellow :weight bold))))
    `(mode-line-inactive
      ((t (:foreground ,zenburn-green-2
                       :background ,zenburn-bg-05
-                      :box (:line-width 1 :color ,zenburn-bg :style nil)))))
+                      :box (:line-width -1 :color ,zenburn-bg+1 :style nil)))))
    `(region ((,class (:background ,zenburn-bg-1))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,zenburn-bg+2))))
@@ -294,7 +296,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(popup-isearch-match ((t (:background ,zenburn-bg :foreground ,zenburn-fg))))
 ;;;;; avy
    `(avy-background-face
-     ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg :inverse-video t))))
+     ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg-1 :inverse-video nil))))
    `(avy-lead-face-0
      ((t (:foreground ,zenburn-green+3 :background ,zenburn-bg :inverse-video nil :weight bold))))
    `(avy-lead-face-1
@@ -492,6 +494,9 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; emacs-w3m
    `(w3m-anchor ((t (:foreground ,zenburn-yellow :underline t
                                  :weight bold))))
+   `(w3m-image-anchor ((t (:background ,zenburn-green-1))))
+   `(w3m-image ((t (:foreground ,zenburn-green+2))))
+   `(w3m-tab-background ((t (:foreground ,zenburn-fg :background ,zenburn-bg+2))))
    `(w3m-arrived-anchor ((t (:foreground ,zenburn-yellow-2
                                          :underline t :weight normal))))
    `(w3m-form ((t (:foreground ,zenburn-red-1 :underline t))))
@@ -776,13 +781,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                                       :underline t :weight bold))))
 ;;;;; ivy
    `(ivy-confirm-face ((t (:foreground ,zenburn-green :background ,zenburn-bg))))
-   `(ivy-current-match ((t (:foreground ,zenburn-yellow :weight bold :underline t))))
+   `(ivy-current-match ((t (:background ,zenburn-bg-1 :weight bold :underline t))))
    `(ivy-cursor ((t (:foreground ,zenburn-bg :background ,zenburn-fg))))
    `(ivy-match-required-face ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
    `(ivy-minibuffer-match-face-1 ((t (:background ,zenburn-bg+1))))
-   `(ivy-minibuffer-match-face-2 ((t (:background ,zenburn-green-2))))
-   `(ivy-minibuffer-match-face-3 ((t (:background ,zenburn-green))))
-   `(ivy-minibuffer-match-face-4 ((t (:background ,zenburn-green+1))))
+   `(ivy-minibuffer-match-face-2 ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(ivy-minibuffer-match-face-3 ((t (:foreground ,zenburn-cyan :weight bold))))
+   `(ivy-minibuffer-match-face-4 ((t (:foreground ,zenburn-orange :weight bold))))
    `(ivy-remote ((t (:foreground ,zenburn-blue :background ,zenburn-bg))))
    `(ivy-subdir ((t (:foreground ,zenburn-yellow :background ,zenburn-bg))))
 ;;;;; ido-mode
@@ -799,11 +804,12 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(jabber-roster-user-xa ((t (:foreground ,zenburn-magenta))))
    `(jabber-roster-user-chatty ((t (:foreground ,zenburn-orange))))
    `(jabber-roster-user-error ((t (:foreground ,zenburn-red+1))))
-   `(jabber-rare-time-face ((t (:foreground ,zenburn-green+1))))
+   `(jabber-rare-time-face ((t (:foreground ,zenburn-yellow :weight bold))))
    `(jabber-chat-prompt-local ((t (:foreground ,zenburn-blue-1 :weight bold))))
-   `(jabber-chat-prompt-foreign ((t (:foreground ,zenburn-red-2 :weight bold))))
+   `(jabber-chat-prompt-foreign ((t (:foreground ,zenburn-red-1 :weight bold))))
    `(jabber-chat-prompt-system ((t (:foreground ,zenburn-green+3))))
-   `(jabber-chat-text-local ((t (:foreground ,zenburn-fg-1))))
+   `(jabber-chat-text-foreign ((t :foreground ,zenburn-fg)))
+   `(jabber-chat-text-local ((t (:foreground "#babaad" :slant italic))))
    `(jabber-activity-face((t (:foreground ,zenburn-red+1))))
    `(jabber-activity-personal-face ((t (:foreground ,zenburn-blue+1))))
    `(jabber-title-small ((t (:height 1.1 :weight bold))))
@@ -897,8 +903,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(magit-diff-file-heading-highlight ((t (:background ,zenburn-bg+05  :weight bold))))
    `(magit-diff-file-heading-selection ((t (:background ,zenburn-bg+05
                                                         :foreground ,zenburn-orange :weight bold))))
-   `(magit-diff-hunk-heading           ((t (:background ,zenburn-bg+1))))
-   `(magit-diff-hunk-heading-highlight ((t (:background ,zenburn-bg+2))))
+   `(magit-diff-hunk-heading           ((t (:background ,zenburn-blue-4))))
+   `(magit-diff-hunk-heading-highlight ((t (:background ,zenburn-blue-3))))
    `(magit-diff-hunk-heading-selection ((t (:background ,zenburn-bg+2
                                                         :foreground ,zenburn-orange))))
    `(magit-diff-lines-heading          ((t (:background ,zenburn-orange
