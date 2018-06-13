@@ -98,7 +98,10 @@ defining them in this alist."
     ("zenburn-blue-3"   . "#5C888B")
     ("zenburn-blue-4"   . "#4C7073")
     ("zenburn-blue-5"   . "#366060")
-    ("zenburn-magenta"  . "#DC8CC3"))
+    ("zenburn-blue-6"   . "#1d4242")
+    ("zenburn-blue-7"   . "#1d3042")
+    ("zenburn-magenta"  . "#DC8CC3")
+    ("zenburn-magenta-1" . "#7f3f6b"))
   "List of Zenburn colors.
 Each element has the form (NAME . HEX).
 
@@ -125,18 +128,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    '(button ((t (:underline t))))
    `(link ((t (:foreground ,zenburn-yellow :underline t :weight bold))))
    `(link-visited ((t (:foreground ,zenburn-yellow-2 :underline t :weight normal))))
-   `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
-   `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-fg+1))))
+   `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg-1))))
+   `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-magenta))))
    `(escape-glyph ((t (:foreground ,zenburn-yellow :weight bold))))
-   `(fringe ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
+   `(fringe ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(header-line ((t (:foreground ,zenburn-yellow
-                                  :background ,zenburn-bg-1
+                                  :background ,zenburn-bg
                                   :box (:line-width -1 :color ,zenburn-bg :style nil)))))
    `(highlight ((t (:background ,zenburn-bg-05))))
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
    `(tooltip ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
-   `(variable-pitch ((t (:font "Source Code Pro"))))
+   `(variable-pitch ((t (:font "DejaVu Sans Mono"))))
 ;;;;; compilation
    `(compilation-column-face ((t (:foreground ,zenburn-yellow))))
    `(compilation-enter-directory-face ((t (:foreground ,zenburn-green))))
@@ -182,19 +185,19 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(minibuffer-prompt ((t (:foreground ,zenburn-yellow))))
    `(mode-line
      ((,class (:foreground ,zenburn-green+1
-                           :background ,zenburn-bg-1
-                           :box (:line-width -1 :color ,zenburn-bg :style released-button)))
+                           :background ,zenburn-bg+05
+                           :box (:line-width 1 :color ,zenburn-bg+1 :style nil)))
       (t :inverse-video t)))
    `(mode-line-buffer-id ((t (:foreground ,zenburn-yellow :weight bold))))
    `(mode-line-inactive
      ((t (:foreground ,zenburn-green-2
                       :background ,zenburn-bg-05
-                      :box (:line-width -1 :color ,zenburn-bg+1 :style nil)))))
-   `(region ((,class (:background ,zenburn-bg-1))
+                      :box (:line-width 1 :color ,zenburn-bg+1 :style nil)))))
+   `(region ((,class (:background ,zenburn-blue-5))
              (t :inverse-video t)))
-   `(secondary-selection ((t (:background ,zenburn-bg+2))))
+   `(secondary-selection ((t (:background ,zenburn-blue-5))))
    `(trailing-whitespace ((t (:background ,zenburn-red))))
-   `(vertical-border ((t (:foreground ,zenburn-fg))))
+   `(vertical-border ((t (:foreground ,zenburn-bg+1))))
 ;;;;; font lock
    `(font-lock-builtin-face ((t (:foreground ,zenburn-fg :weight bold))))
    `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
@@ -739,9 +742,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(helm-swoop-target-line-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
    `(helm-swoop-target-word-face ((t (:foreground ,zenburn-yellow :background ,zenburn-bg+2 :weight bold))))
 ;;;;; hl-line-mode
-   `(hl-line-face ((,class (:background ,zenburn-bg-05))
+   `(hl-line-face ((,class (:background ,zenburn-blue-5))
                    (t :weight bold)))
-   `(hl-line ((,class (:background ,zenburn-bg-05)) ; old emacsen
+   `(hl-line ((,class (:background ,zenburn-blue-5)) ; old emacsen
               (t :weight bold)))
 ;;;;; hl-sexp
    `(hl-sexp-face ((,class (:background ,zenburn-bg+1))
@@ -780,14 +783,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(irfc-title-face ((t (:foreground ,zenburn-yellow
                                       :underline t :weight bold))))
 ;;;;; ivy
-   `(ivy-confirm-face ((t (:foreground ,zenburn-green :background ,zenburn-bg))))
-   `(ivy-current-match ((t (:background ,zenburn-bg-1 :weight bold :underline t))))
+   `(ivy-confirm-face ((t (:foreground ,zenburn-green :background ,zenburn-bg-1))))
+   `(ivy-current-match ((t (:background ,zenburn-blue-5 :weight bold :underline t))))
    `(ivy-cursor ((t (:foreground ,zenburn-bg :background ,zenburn-fg))))
    `(ivy-match-required-face ((t (:foreground ,zenburn-red :background ,zenburn-bg))))
-   `(ivy-minibuffer-match-face-1 ((t (:background ,zenburn-bg+1))))
-   `(ivy-minibuffer-match-face-2 ((t (:foreground ,zenburn-yellow :weight bold))))
-   `(ivy-minibuffer-match-face-3 ((t (:foreground ,zenburn-cyan :weight bold))))
-   `(ivy-minibuffer-match-face-4 ((t (:foreground ,zenburn-orange :weight bold))))
+   `(ivy-minibuffer-match-face-1 ((t (:background ,zenburn-bg-1))))
+   `(ivy-minibuffer-match-face-2 ((t (:background ,zenburn-yellow :foreground ,zenburn-bg :weight bold))))
+   `(ivy-minibuffer-match-face-3 ((t (:background ,zenburn-cyan :foreground ,zenburn-bg :weight bold))))
+   `(ivy-minibuffer-match-face-4 ((t (:background ,zenburn-orange :foreground ,zenburn-bg :weight bold))))
    `(ivy-remote ((t (:foreground ,zenburn-blue :background ,zenburn-bg))))
    `(ivy-subdir ((t (:foreground ,zenburn-yellow :background ,zenburn-bg))))
 ;;;;; ido-mode
